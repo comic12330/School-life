@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_card"
+        android:icon="@drawable/ic_card"
+        android:title="校园卡" />
+    <item
+        android:id="@+id/nav_edu"
+        android:icon="@drawable/ic_edu"
+        android:title="教务" />
+    <item
+        android:id="@+id/nav_weather"
+        android:icon="@drawable/ic_weather"
+        android:title="天气" />
+    <item
+        android:id="@+id/nav_schedule"
+        android:icon="@drawable/ic_schedule"
+        android:title="课表" />
+</menu>

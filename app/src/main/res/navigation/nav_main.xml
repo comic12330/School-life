@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_card">
+
+    <fragment
+        android:id="@+id/nav_card"
+        android:name="com.example.school_life.ui.card.CardFragment"
+        android:label="校园卡" />
+    <fragment
+        android:id="@+id/nav_edu"
+        android:name="com.example.school_life.ui.edu.EduFragment"
+        android:label="教务" />
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="com.example.school_life.ui.weather.WeatherFragment"
+        android:label="天气" />
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.example.school_life.ui.schedule.ScheduleFragment"
+        android:label="课表" />
+</navigation>
