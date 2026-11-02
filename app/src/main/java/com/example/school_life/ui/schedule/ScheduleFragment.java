@@ -26,6 +26,7 @@ import com.example.school_life.net.ApiClient;
 import com.example.school_life.net.model.Course;
 import com.example.school_life.alarm.AlarmScheduler;
 import com.example.school_life.util.Prefs;
+import com.example.school_life.util.SectionTimes;
 import com.example.school_life.util.TermPrefs;
 import com.example.school_life.util.WeekUtils;
 
@@ -164,7 +165,8 @@ public class ScheduleFragment extends Fragment {
             cells.add(new Cell(d, 0, DAY_NAMES[d - 1] + "\n" + date, null, false, true));
         }
         for (int s = 1; s <= 12; s++) {
-            cells.add(new Cell(0, s, String.valueOf(s), null, false, true));
+            cells.add(new Cell(0, s, "第" + s + "节\n" + SectionTimes.LABELS[s] + "\n"
+                    + SectionTimes.endLabel(s), null, false, true));
             for (int d = 1; d <= 7; d++) {
                 Course hit = findCourse(d, s);
                 if (hit != null && hit.startSection == s) {
