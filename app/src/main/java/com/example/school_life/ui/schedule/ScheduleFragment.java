@@ -26,7 +26,6 @@ import com.example.school_life.net.ApiClient;
 import com.example.school_life.net.model.Course;
 import com.example.school_life.alarm.AlarmScheduler;
 import com.example.school_life.util.Prefs;
-import com.example.school_life.util.SectionTimes;
 import com.example.school_life.util.TermPrefs;
 import com.example.school_life.util.WeekUtils;
 
@@ -213,11 +212,11 @@ public class ScheduleFragment extends Fragment {
         spDay.setAdapter(spinnerAdapter(DAY_NAMES));
         String[] sections = new String[12];
         for (int i = 1; i <= 12; i++) {
-            sections[i - 1] = "第" + i + "节(" + SectionTimes.LABELS[i] + ")";
+            sections[i - 1] = "第" + i + "节";
         }
         spStart.setAdapter(spinnerAdapter(sections));
         spEnd.setAdapter(spinnerAdapter(sections));
-        spWeekType.setAdapter(spinnerAdapter(new String[]{"每周", "单周", "双周"}));
+        spWeekType.setAdapter(spinnerAdapter(new String[]{"每周上课", "仅单周", "仅双周"}));
 
         if (course != null) {
             etName.setText(course.name);

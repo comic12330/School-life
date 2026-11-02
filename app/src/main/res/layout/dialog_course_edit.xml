@@ -9,27 +9,18 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程名称"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp" />
+
         <EditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="课程名称"
-            android:maxLines="1" />
-
-        <EditText
-            android:id="@+id/et_teacher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="教师"
-            android:maxLines="1" />
-
-        <EditText
-            android:id="@+id/et_room"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="教室"
+            android:hint="如：数据结构"
             android:maxLines="1" />
 
         <LinearLayout
@@ -38,25 +29,48 @@
             android:layout_marginTop="12dp"
             android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/sp_day"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/sp_start_section"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="任课教师"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
 
-            <Spinner
-                android:id="@+id/sp_end_section"
+                <EditText
+                    android:id="@+id/et_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="如：王老师"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1" />
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上课教室"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="如：教一201"
+                    android:maxLines="1" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -65,32 +79,151 @@
             android:layout_marginTop="12dp"
             android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/sp_week_type"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/et_start_week"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:hint="开始周"
-                android:inputType="number"
-                android:maxLines="1" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/et_end_week"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="星期"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/sp_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 android:layout_weight="1"
-                android:hint="结束周"
-                android:inputType="number"
-                android:maxLines="1" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单双周"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/sp_week_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始节次"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/sp_start_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束节次"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/sp_end_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始周"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_start_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="如：3"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束周"
+                    android:textColor="@color/gray_text"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_end_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="如：16"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="开始周和结束周决定这门课从第几周上到第几周，例如 3 到 16 表示第 3~16 周有课。"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,15 +238,31 @@
                 android:layout_height="wrap_content"
                 android:text="上课提醒" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="提前"
+                android:textColor="@color/gray_text"
+                android:textSize="12sp" />
+
             <EditText
                 android:id="@+id/et_remind_minutes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:hint="提前分钟数"
+                android:hint="分钟数"
                 android:inputType="number"
                 android:maxLines="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="分钟"
+                android:textColor="@color/gray_text"
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
